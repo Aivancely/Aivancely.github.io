@@ -21,7 +21,7 @@ const apps: App[] = [
     description: 'GoSystem Bookmarks is a Chrome extension that allows you to bookmarks to quickly navigate within GoSystems.',
     githubRepo: 'https://github.com/Aivancely/gst-bookmarks',
     tags: ['GoSystems', 'Chrome Extension', 'Bookmark'],
-    imageSrc: './img/apps/gst-bookmarks.jpg',
+    imageSrc: './img/apps/gst-bookmarks.png',
   },
   {
     id: 'docai-assistant',
@@ -29,7 +29,7 @@ const apps: App[] = [
     description: 'An AI-powered document assistant that helps you extract information, summarize content, and answer questions about your documents.',
     githubRepo: 'https://github.com/Aivancely/docai-assistant',
     tags: ['Document', 'AI', 'React', 'NLP'],
-    imageSrc: './img/apps/docai-assistant.jpg',
+    imageSrc: 'https://placehold.co/600x400',
     liveUrl: 'https://docai.aivancely.com',
   },
   {
@@ -38,7 +38,7 @@ const apps: App[] = [
     description: 'Build custom AI agents without coding. Connect to various APIs and data sources to create powerful automation workflows.',
     githubRepo: 'https://github.com/Aivancely/agent-builder',
     tags: ['Agent', 'No-code', 'Automation'],
-    imageSrc: './img/apps/agent-builder.jpg',
+    imageSrc: 'https://placehold.co/600x400',
   },
   {
     id: 'meeting-summarizer',
@@ -46,7 +46,7 @@ const apps: App[] = [
     description: 'Automatically generate summaries, action items, and key points from your meeting recordings or transcripts.',
     githubRepo: 'https://github.com/Aivancely/meeting-summarizer',
     tags: ['Meetings', 'Summary', 'ML'],
-    imageSrc: './img/apps/meeting-summarizer.jpg',
+    imageSrc: 'https://placehold.co/600x400',
   },
 ];
 
