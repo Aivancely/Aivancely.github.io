@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface NavItem {
   label: string;
   href: string;
+  isExternal?: boolean;
   children?: NavItem[];
 }
 
 const navItems: NavItem[] = [
-  { label: 'Home', href: '#' },
+  { label: 'Home', href: '/' },
   { 
     label: 'Services', 
     href: '#services',
@@ -21,6 +23,7 @@ const navItems: NavItem[] = [
   { label: 'Case Studies', href: '#case-studies' },
   { label: 'About Us', href: '#about' },
   { label: 'Resources', href: '#resources' },
+  { label: 'App Marketplace', href: '/apps' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -50,18 +53,36 @@ const Navbar: React.FC = () => {
     }
   };
 
+  // Helper function to render the correct link (Link or anchor)
+  const renderNavLink = (item: NavItem, className: string) => {
+    // If link starts with "#" or is a hash link for the home page
+    if (item.href.startsWith('#')) {
+      return (
+        <a href={item.href} className={className}>
+          {item.label}
+        </a>
+      );
+    }
+    
+    return (
+      <Link to={item.href} className={className}>
+        {item.label}
+      </Link>
+    );
+  };
+
   return (
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img 
                 src="/Aivancely.png" 
                 alt="Aivancely" 
                 className="h-12 w-auto"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -72,9 +93,10 @@ const Navbar: React.FC = () => {
                   className="flex items-center cursor-pointer"
                   onClick={() => item.children && toggleDropdown(item.label)}
                 >
-                  <a href={item.href} className={`text-sm font-medium ${scrolled ? 'text-gray-800 hover:text-primary-600' : 'text-gray-800 hover:text-primary-600'} transition-colors duration-200`}>
-                    {item.label}
-                  </a>
+                  {renderNavLink(
+                    item, 
+                    `text-sm font-medium ${scrolled ? 'text-gray-800 hover:text-primary-600' : 'text-gray-800 hover:text-primary-600'} transition-colors duration-200`
+                  )}
                   {item.children && (
                     <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
                   )}
@@ -83,13 +105,12 @@ const Navbar: React.FC = () => {
                 {item.children && (
                   <div className={`absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 transition-all duration-200 ${activeDropdown === item.label ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                     {item.children.map((child) => (
-                      <a
-                        key={child.label}
-                        href={child.href}
-                        className="block px-4 py-2 text-sm text-gray-800 hover:bg-primary-50 hover:text-primary-600"
-                      >
-                        {child.label}
-                      </a>
+                      <div key={child.label}>
+                        {renderNavLink(
+                          child,
+                          "block px-4 py-2 text-sm text-gray-800 hover:bg-primary-50 hover:text-primary-600"
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
@@ -127,9 +148,10 @@ const Navbar: React.FC = () => {
                     className="flex items-center justify-between"
                     onClick={() => item.children && toggleDropdown(item.label)}
                   >
-                    <a href={item.href} className="text-gray-800 hover:text-primary-600 transition-colors duration-200 text-base font-medium">
-                      {item.label}
-                    </a>
+                    {renderNavLink(
+                      item,
+                      "text-gray-800 hover:text-primary-600 transition-colors duration-200 text-base font-medium"
+                    )}
                     {item.children && (
                       <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
                     )}
@@ -138,13 +160,12 @@ const Navbar: React.FC = () => {
                   {item.children && activeDropdown === item.label && (
                     <div className="mt-2 ml-4 space-y-2">
                       {item.children.map((child) => (
-                        <a
-                          key={child.label}
-                          href={child.href}
-                          className="block text-gray-600 hover:text-primary-600 text-sm"
-                        >
-                          {child.label}
-                        </a>
+                        <div key={child.label}>
+                          {renderNavLink(
+                            child,
+                            "block text-gray-600 hover:text-primary-600 text-sm"
+                          )}
+                        </div>
                       ))}
                     </div>
                   )}

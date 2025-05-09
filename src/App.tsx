@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -7,9 +8,12 @@ import About from './components/About';
 import Resources from './components/Resources';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Chatbot from './components/Chatbot';
+import AppMarketplace from './components/AppMarketplace';
 import './styles/animations.css';
 
-function App() {
+// Home page component
+const HomePage = () => {
   useEffect(() => {
     // Add animation for elements when they come into view
     const observer = new IntersectionObserver((entries) => {
@@ -31,7 +35,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Navbar />
       <main>
         <Hero />
@@ -42,6 +46,25 @@ function App() {
         <Contact />
       </main>
       <Footer />
+    </>
+  );
+};
+
+function App() {
+  const location = useLocation();
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/apps" element={<AppMarketplace />} />
+      </Routes>
+      <Chatbot />
     </div>
   );
 }
