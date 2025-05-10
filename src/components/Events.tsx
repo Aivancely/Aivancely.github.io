@@ -46,23 +46,7 @@ const speakingEvents: Event[] = [
       'ROI calculation for AI initiatives',
       'Implementation planning'
     ]
-  },
-  {
-    id: 3,
-    title: 'Enterprise AI Transformation Webinar',
-    date: 'December 7, 2023',
-    location: 'Virtual',
-    type: 'Webinar',
-    description: 'A free online webinar where Rich Marlatt discusses practical approaches to enterprise AI adoption. Learn the critical factors for successful AI implementation and how to avoid common pitfalls that companies encounter during their AI transformation journey.',
-    eventUrl: 'https://example.com/webinar',
-    imageUrl: 'https://images.pexels.com/photos/7947130/pexels-photo-7947130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    topics: [
-      'AI readiness assessment',
-      'Technology selection criteria',
-      'Change management approaches',
-      'Measuring AI impact'
-    ]
-  },
+  }
   {
     id: 4,
     title: 'Corporate AI Strategy Workshop',
