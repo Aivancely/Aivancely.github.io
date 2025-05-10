@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
             Leverage <span className="text-primary-600">AI</span> to <br />Rise Above the Chaos
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Streamline your tax and accounting processes, reduce stress, and stay ahead of the curve—without the overwhelm. Let <span className="font-bold" style={{ color: '#004377' }}>Aivancely</span> be your guide to AI-driven success.
+            Streamline your processes, reduce stress, and stay ahead of the curve—without the overwhelm. Let <span className="font-bold" style={{ color: '#004377' }}>Aivancely</span> be your guide to AI-driven success.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
