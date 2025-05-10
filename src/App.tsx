@@ -6,6 +6,7 @@ import Services from './components/Services';
 import CaseStudies from './components/CaseStudies';
 import About from './components/About';
 import Resources from './components/Resources';
+import Events from './components/Events';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
@@ -42,6 +43,7 @@ const HomePage = () => {
         <Services />
         <CaseStudies />
         <About />
+        <Events />
         <Resources />
         <Contact />
       </main>

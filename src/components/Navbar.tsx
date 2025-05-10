@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface NavItem {
   label: string;
@@ -13,24 +13,26 @@ const navItems: NavItem[] = [
   { label: 'Home', href: '/' },
   { 
     label: 'Services', 
-    href: '#services',
+    href: '/#services',
     children: [
-      { label: 'AI Development', href: '#ai-development' },
-      { label: 'Workflow Mapping', href: '#workflow-mapping' },
-      { label: 'Automation Solutions', href: '#automation' },
+      { label: 'AI Development', href: '/#ai-development' },
+      { label: 'Workflow Mapping', href: '/#workflow-mapping' },
+      { label: 'Automation Solutions', href: '/#automation' },
     ]
   },
-  { label: 'Case Studies', href: '#case-studies' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Resources', href: '#resources' },
+  { label: 'Case Studies', href: '/#case-studies' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Events', href: '/#events' },
+  { label: 'Resources', href: '/#resources' },
   { label: 'App Marketplace', href: '/apps' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,12 +55,26 @@ const Navbar: React.FC = () => {
     }
   };
 
+  // Scroll to the section when clicking on a hash link
+  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    // Extract the section id from href (remove the '/#' prefix)
+    const sectionId = href.replace('/#', '');
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   // Helper function to render the correct link (Link or anchor)
   const renderNavLink = (item: NavItem, className: string) => {
-    // If link starts with "#" or is a hash link for the home page
-    if (item.href.startsWith('#')) {
+    if (item.href.includes('#') && item.href !== '/#') {
       return (
-        <a href={item.href} className={className}>
+        <a 
+          href={item.href} 
+          className={className}
+          onClick={(e) => handleScrollToSection(e, item.href)}
+        >
           {item.label}
         </a>
       );
@@ -120,7 +136,8 @@ const Navbar: React.FC = () => {
 
           <div className="hidden lg:block">
             <a
-              href="#contact"
+              href="/#contact"
+              onClick={(e) => handleScrollToSection(e, '/#contact')}
               className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300"
             >
               Get Started
@@ -173,7 +190,8 @@ const Navbar: React.FC = () => {
               ))}
               <div className="pt-2">
                 <a
-                  href="#contact"
+                  href="/#contact"
+                  onClick={(e) => handleScrollToSection(e, '/#contact')}
                   className="block w-full bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md text-center text-base font-medium transition-colors duration-300"
                 >
                   Get Started
