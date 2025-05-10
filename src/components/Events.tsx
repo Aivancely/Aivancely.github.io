@@ -46,7 +46,7 @@ const speakingEvents: Event[] = [
       'ROI calculation for AI initiatives',
       'Implementation planning'
     ]
-  }
+  },
   {
     id: 4,
     title: 'Corporate AI Strategy Workshop',
