@@ -53,6 +53,20 @@ const PrivacyPolicy: React.FC = () => {
                 These apps are created to provide users with enjoyable experiences while maintaining the highest standards 
                 of privacy and data protection.
               </p>
+              <p className="text-gray-600 mb-4">
+                This Privacy Policy applies to the following Android applications published by Aivancely:
+              </p>
+              <div className="bg-gray-50 rounded-lg p-4 mb-4">
+                <ul className="space-y-2">
+                  <li className="flex items-center text-gray-700">
+                    <span className="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                    <strong>MineMatch Quest</strong> - A fun matching puzzle game
+                  </li>
+                </ul>
+              </div>
+              <p className="text-gray-600 text-sm">
+                <em>Note: This list will be updated as we publish additional applications.</em>
+              </p>
             </div>
 
             <div className="mb-8">

@@ -26,7 +26,7 @@ const predefinedResponses: Record<string, string> = {
   "data security": "We take data security seriously and implement robust security measures to protect your data. All our solutions comply with relevant data protection regulations.",
   "integration": "Our solutions can integrate with your existing systems and workflows. We design our AI solutions to work seamlessly with your current technology stack.",
   "privacy policy": "You can view our privacy policy at /privacy. Our Android apps are designed with privacy in mind and do not collect any user data.",
-  "android apps": "We develop Android applications for entertainment purposes. All our apps are privacy-first and do not collect any user data. You can view our privacy policy for more details.",
+  "android apps": "We develop Android applications for entertainment purposes, including MineMatch Quest - a fun matching puzzle game. All our apps are privacy-first and do not collect any user data. You can view our privacy policy for more details.",
   "apps": "Check out our App Marketplace to see our collection of open-source AI applications and tools. We also develop Android apps for entertainment.",
   "hello": "Hello! How can I help you today?",
   "hi": "Hi there! How can I assist you with our AI solutions?",
