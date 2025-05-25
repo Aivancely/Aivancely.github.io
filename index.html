@@ -18,6 +18,19 @@
 
       gtag('config', 'G-RME6ZNE1BR');
     </script>
+    <script type="text/javascript">
+      // Handle redirects from 404.html for GitHub Pages SPA
+      (function(l) {
+        // Check if we're on the home page with a hash that contains a path
+        if (l.pathname === '/' && l.hash && l.hash.length > 1) {
+          var path = l.hash.slice(1); // Remove the # character
+          if (path.startsWith('/')) {
+            // Replace the current URL with the clean path
+            window.history.replaceState(null, null, path + l.search);
+          }
+        }
+      }(window.location))
+    </script>
   </head>
   <body class="font-sans">
     <div id="root"></div>
