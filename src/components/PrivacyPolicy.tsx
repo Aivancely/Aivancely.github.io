@@ -29,7 +29,7 @@ const PrivacyPolicy: React.FC = () => {
             </p>
           </div>
 
-          <div className="max-w-none">
+          <div className="">
             <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
               <div className="flex items-start">
                 <Lock className="h-6 w-6 text-green-600 mt-1 mr-3 flex-shrink-0" />
