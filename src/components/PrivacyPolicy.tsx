@@ -43,7 +43,7 @@ const PrivacyPolicy: React.FC = () => {
               </div>
             </div>
 
-            <section className="mb-8">
+            <div className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                 <Smartphone className="h-6 w-6 mr-2 text-indigo-600" />
                 About Our Android Apps
@@ -53,9 +53,9 @@ const PrivacyPolicy: React.FC = () => {
                 These apps are created to provide users with enjoyable experiences while maintaining the highest standards 
                 of privacy and data protection.
               </p>
-            </section>
+            </div>
 
-            <section className="mb-8">
+            <div className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                 <Eye className="h-6 w-6 mr-2 text-indigo-600" />
                 Information We Do NOT Collect
@@ -73,17 +73,17 @@ const PrivacyPolicy: React.FC = () => {
                 <li>Network information or browsing history</li>
                 <li>Any other personal or sensitive information</li>
               </ul>
-            </section>
+            </div>
 
-            <section className="mb-8">
+            <div className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Storage and Processing</h2>
               <p className="text-gray-600 mb-4">
                 Since our applications do not collect any user data, there is no data to store, process, or transmit. 
                 All app functionality operates locally on your device without any external data transmission.
               </p>
-            </section>
+            </div>
 
-            <section className="mb-8">
+            <div className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Third-Party Services</h2>
               <p className="text-gray-600 mb-4">
                 Our Android applications may use standard Android system services for basic functionality (such as 
@@ -92,35 +92,35 @@ const PrivacyPolicy: React.FC = () => {
               <p className="text-gray-600">
                 We do not integrate with any third-party analytics services, advertising networks, or data collection platforms.
               </p>
-            </section>
+            </div>
 
-            <section className="mb-8">
+            <div className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Permissions</h2>
               <p className="text-gray-600 mb-4">
                 Our applications request only the minimum permissions necessary for basic functionality. Any permissions 
                 requested are used solely for the app's intended entertainment features and not for data collection purposes.
               </p>
-            </section>
+            </div>
 
-            <section className="mb-8">
+            <div className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Children's Privacy</h2>
               <p className="text-gray-600 mb-4">
                 Our applications are suitable for all ages. Since we do not collect any personal information, 
                 there are no special considerations regarding children's data under COPPA (Children's Online Privacy Protection Act) 
                 or similar regulations.
               </p>
-            </section>
+            </div>
 
-            <section className="mb-8">
+            <div className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to This Privacy Policy</h2>
               <p className="text-gray-600 mb-4">
                 We may update this Privacy Policy from time to time. Any changes will be posted on this page with 
                 an updated revision date. Since our apps do not collect data, changes are typically minimal and 
                 relate to clarifications or additional information about our privacy practices.
               </p>
-            </section>
+            </div>
 
-            <section className="mb-8">
+            <div className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
               <p className="text-gray-600 mb-4">
                 If you have any questions about this Privacy Policy or our Android applications, please contact us:
@@ -130,9 +130,9 @@ const PrivacyPolicy: React.FC = () => {
                 <p className="text-gray-700 mb-2"><strong>Email:</strong> privacy@aivancely.com</p>
                 <p className="text-gray-700"><strong>Website:</strong> https://aivancely.com</p>
               </div>
-            </section>
+            </div>
 
-            <section className="mb-8">
+            <div className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Compliance</h2>
               <p className="text-gray-600 mb-4">
                 This Privacy Policy is designed to comply with:
@@ -144,7 +144,7 @@ const PrivacyPolicy: React.FC = () => {
                 <li>Children's Online Privacy Protection Act (COPPA)</li>
                 <li>Other applicable privacy laws and regulations</li>
               </ul>
-            </section>
+            </div>
 
             <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6 mt-8">
               <h3 className="text-lg font-semibold text-indigo-800 mb-2">Summary</h3>
