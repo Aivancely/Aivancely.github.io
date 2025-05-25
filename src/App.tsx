@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
 import AppMarketplace from './components/AppMarketplace';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import './styles/animations.css';
 
 // Home page component
@@ -65,6 +66,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/apps" element={<AppMarketplace />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
       <Chatbot />
     </div>

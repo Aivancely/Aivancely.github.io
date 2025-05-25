@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -42,8 +43,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li><a href="#about" className="text-gray-400 hover:text-white transition-colors duration-200">About Us</a></li>
               <li><a href="#case-studies" className="text-gray-400 hover:text-white transition-colors duration-200">Case Studies</a></li>
+              <li><Link to="/apps" className="text-gray-400 hover:text-white transition-colors duration-200">App Marketplace</Link></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Blog</a></li>
               <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors duration-200">Contact</a></li>
             </ul>
           </div>
@@ -75,7 +76,7 @@ const Footer: React.FC = () => {
               &copy; {new Date().getFullYear()} <span style={{ color: '#004377' }}>Aivancely</span>. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">Privacy Policy</a>
+              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">Privacy Policy</Link>
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">Terms of Service</a>
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">Cookies</a>
             </div>
